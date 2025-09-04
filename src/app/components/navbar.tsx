@@ -120,7 +120,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <ul className="md:hidden absolute top-full left-0 w-full bg-blue-900 text-white flex flex-col space-y-1 p-4 z-40">
           <li><Link href="/" className="hover:text-yellow-300">Home</Link></li>
-          <li><Link href="/about" className="hover:text-yellow-300">About</Link></li>
+          <li><Link href="/aboutus" className="hover:text-yellow-300">About Us</Link></li>
           <li><Link href="/vision" className="hover:text-yellow-300">Vision</Link></li>
           <li><Link href="/projects" className="hover:text-yellow-300">Projects</Link></li>
           <li><Link href="/contact" className="hover:text-yellow-300">Contact</Link></li>

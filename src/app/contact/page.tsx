@@ -1,94 +1,64 @@
-// FILE: src/app/contact/page.tsx
-import Link from "next/link";
-
-export const metadata = {
-  title: "Contact — Your Company",
-};
+// src/app/contact/page.tsx
+import { MapPin, Phone, Smartphone, Mail, Globe } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="bg-gray-50 text-gray-800 min-h-screen">
-      {/* Header */}
-      <header className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">
-              YC
-            </div>
-          </Link>
-          <nav className="space-x-6 text-sm">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/ecosystem">Ecosystem</Link>
-            <Link
-              href="/lifecycle"
-              className="text-white bg-indigo-600 px-4 py-2 rounded-md"
-            >
-              Lifecycle
-            </Link>
-            <Link href="/contact" className="underline font-semibold">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gray-50 text-gray-900 px-6 py-12">
+      <h1 className="text-3xl font-bold text-blue-900 mb-6 text-center">Contact Us</h1>
 
-      {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-6 py-14">
-        <h2 className="text-3xl font-bold">Contact Us</h2>
-        <p className="mt-2 text-gray-600">
-          Fill this basic contact form and we&apos;ll reach out to you.
-        </p>
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 space-y-6">
+        <h2 className="text-xl font-semibold text-blue-800">AABHA NEXUS INNOVATIONS (ANI)</h2>
 
-        {/* Contact Form */}
-        <form className="mt-6 bg-white p-6 rounded-lg shadow-md space-y-4">
-          <div>
-            <label className="block text-sm font-medium">Name</label>
-            <input
-              type="text"
-              className="mt-1 block w-full rounded-md border border-gray-200 shadow-sm p-2"
-              placeholder="Your name"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Email</label>
-            <input
-              type="email"
-              className="mt-1 block w-full rounded-md border border-gray-200 shadow-sm p-2"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Message</label>
-            <textarea
-              className="mt-1 block w-full rounded-md border border-gray-200 shadow-sm p-2"
-              rows={4}
-              placeholder="Tell us about your project"
-              required
-            ></textarea>
-          </div>
-          <div>
-            <button
-              type="submit"
-              className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
-
-        {/* Contact us Details */}
-        <div className="mt-8 bg-white p-4 rounded-lg shadow-md">
-          <h4 className="font-semibold">Contact Details</h4>
-          <p className="text-sm text-gray-600 mt-2">
-            Phone: +91 90000 00000 <br />
-            Email: info@yourcompany.com <br />
-            Address: Your office address here
+        {/* Address */}
+        <div className="flex items-start gap-3">
+          <MapPin className="w-6 h-6 text-red-600 mt-1" />
+          <p>
+            <b>Registered Office:</b> 69, 60feet road, Rajrooppur, Prayagraj, 211011
           </p>
         </div>
-      </main>
+
+        {/* Contact Numbers */}
+        <div className="flex items-start gap-3">
+          <Phone className="w-6 h-6 text-green-600 mt-1" />
+          <div>
+            <p>Office Contact: +91 7259398273</p>
+            <p>Call Contact: +91 8400976525</p>
+            <p>WhatsApp Contact: +91 7307335045</p>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex items-start gap-3">
+          <Mail className="w-6 h-6 text-blue-600 mt-1" />
+          <p>
+            <a href="mailto:info@aabhanexus.com" className="text-blue-700 hover:underline">
+              info@aabhanexus.com
+            </a>
+            ,{" "}
+            <a href="mailto:yakuld2225@gmail.com" className="text-blue-700 hover:underline">
+              yakuld2225@gmail.com
+            </a>
+          </p>
+        </div>
+
+        {/* Website */}
+        <div className="flex items-start gap-3">
+          <Globe className="w-6 h-6 text-purple-600 mt-1" />
+          <a href="https://aabhanexus.com/" target="_blank" className="text-blue-700 hover:underline">
+            https://aabhanexus.com/
+          </a>
+        </div>
+
+        {/* Service Availability */}
+        <div>
+          <h3 className="font-semibold text-blue-800 mt-4 mb-2">Service Availability:</h3>
+          <p className="text-gray-700 leading-relaxed">
+            Delhi | Noida | Gurgaon | Jaipur | Chandigarh | Ahmedabad | Surat | Dehradun | Moradabad | 
+            Rudrapur | Bareilly | Lucknow | Prayagraj | Patna | Siliguri | Kanpur | Satna | Indore | 
+            Aurangabad | Pune | Mumbai | Vishakhapatnam | Kolkata | Bangalore | Kochi | Chennai | Hyderabad
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
