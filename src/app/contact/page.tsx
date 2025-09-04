@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div>
             <p>Office Contact: +91 7259398273</p>
             <p>Call Contact: +91 8400976525</p>
-            <p>WhatsApp Contact: +91 7307335045</p>
+            <p>WhatsApp Contact: +91 730733504</p>
           </div>
         </div>
 
