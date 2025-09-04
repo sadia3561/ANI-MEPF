@@ -5,12 +5,12 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
-  const [projectDropdownOpen, setProjectDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
 
   return (
     <nav className="bg-blue-900 text-white p-4 flex justify-between items-center relative">
-      <div className="text-xl font-bold">ANI MEPF</div>
+      <div className="text-xl font-bold">Your Company</div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 items-center">
@@ -18,72 +18,72 @@ export default function Navbar() {
           <Link href="/" className="hover:text-yellow-300">Home</Link>
         </li>
         <li>
-          <Link href="/about" className="hover:text-yellow-300">About</Link>
+          <Link href="/aboutus" className="hover:text-yellow-300">About Us</Link>
         </li>
         <li>
           <Link href="/vision" className="hover:text-yellow-300">Vision</Link>
         </li>
-{/* Service Dropdown */}
+{/* Services Dropdown */}
 <li
   className="relative"
-  onMouseEnter={() => setServiceDropdownOpen(true)}
-  onMouseLeave={() => setServiceDropdownOpen(false)}
+  onMouseEnter={() => setServicesDropdownOpen(true)}
+  onMouseLeave={() => setServicesDropdownOpen(false)}
 >
   <button
     type="button"
     className="hover:text-yellow-300 flex items-center focus:outline-none"
     aria-haspopup="true"
-    aria-expanded={serviceDropdownOpen}
+    aria-expanded={servicesDropdownOpen}
   >
-    Service
+    Services
     <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   </button>
 
-  {serviceDropdownOpen && (
+  {servicesDropdownOpen && (
     <ul className="absolute top-full left-0 mt-2 w-52 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg z-50 overflow-hidden">
-      <li><Link href="/service/tender" className="block px-4 py-2 hover:bg-blue-700">Tender</Link></li>
-      <li><Link href="/service/project-design" className="block px-4 py-2 hover:bg-purple-700">Project Design</Link></li>
-      <li><Link href="/service/project-consultant" className="block px-4 py-2 hover:bg-blue-700">Project Consultant</Link></li>
-      <li><Link href="/service/project-management" className="block px-4 py-2 hover:bg-purple-700">Project Management</Link></li>
-      <li><Link href="/service/project-execution" className="block px-4 py-2 hover:bg-blue-700">Project Execution</Link></li>
-      <li><Link href="/service/project-documentation" className="block px-4 py-2 hover:bg-purple-700">Project Documentation</Link></li>
-      <li><Link href="/service/billing" className="block px-4 py-2 hover:bg-blue-700">Billing</Link></li>
-      <li><Link href="/service/amc-contract" className="block px-4 py-2 hover:bg-purple-700">AMC Contract</Link></li>
+      <li><Link href="/services/tender" className="block px-4 py-2 hover:bg-blue-700">Tender</Link></li>
+      <li><Link href="/services/project-design" className="block px-4 py-2 hover:bg-purple-700">Project Design</Link></li>
+      <li><Link href="/services/project-consultant" className="block px-4 py-2 hover:bg-blue-700">Project Consultant</Link></li>
+      <li><Link href="/services/project-management" className="block px-4 py-2 hover:bg-purple-700">Project Management</Link></li>
+      <li><Link href="/services/project-execution" className="block px-4 py-2 hover:bg-blue-700">Project Execution</Link></li>
+      <li><Link href="/services/project-documentation" className="block px-4 py-2 hover:bg-purple-700">Project Documentation</Link></li>
+      <li><Link href="/services/billing" className="block px-4 py-2 hover:bg-blue-700">Billing</Link></li>
+      <li><Link href="/services/amc-contract" className="block px-4 py-2 hover:bg-purple-700">AMC Contract</Link></li>
     </ul>
   )}
 </li>
 
-{/* Project Dropdown */}
+{/* Projects Dropdown */}
 <li
   className="relative"
-  onMouseEnter={() => setProjectDropdownOpen(true)}
-  onMouseLeave={() => setProjectDropdownOpen(false)}
+  onMouseEnter={() => setProjectsDropdownOpen(true)}
+  onMouseLeave={() => setProjectsDropdownOpen(false)}
 >
   <button
     type="button"
     className="hover:text-yellow-300 flex items-center focus:outline-none"
     aria-haspopup="true"
-    aria-expanded={projectDropdownOpen}
+    aria-expanded={projectsDropdownOpen}
   >
-    Project
+    Projects
     <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   </button>
 
-  {projectDropdownOpen && (
+  {projectsDropdownOpen && (
     <ul className="absolute top-full left-0 mt-2 w-52 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg z-50 overflow-hidden">
-      <li><Link href="/project/delivered-projects" className="block px-4 py-2 hover:bg-green-700">Delivered Projects</Link></li>
-      <li><Link href="/project/ongoing-projects" className="block px-4 py-2 hover:bg-teal-700">Ongoing Projects</Link></li>
-      <li><Link href="/project/upcoming-projects" className="block px-4 py-2 hover:bg-green-700">Upcoming Projects</Link></li>
+      <li><Link href="/projects/delivered-projects" className="block px-4 py-2 hover:bg-green-700">Delivered Projects</Link></li>
+      <li><Link href="/projects/ongoing-projects" className="block px-4 py-2 hover:bg-teal-700">Ongoing Projects</Link></li>
+      <li><Link href="/projects/upcoming-projects" className="block px-4 py-2 hover:bg-green-700">Upcoming Projects</Link></li>
     </ul>
   )}
 </li>
 
 
-        <li><Link href="/projects" className="hover:text-yellow-300">Projects</Link></li>
+        
         <li><Link href="/clients" className="hover:text-yellow-300">Clients</Link></li>
         <li><Link href="/vendors" className="hover:text-yellow-300">Vendors</Link></li>
         <li><Link href="/suppliers" className="hover:text-yellow-300">Suppliers</Link></li>
