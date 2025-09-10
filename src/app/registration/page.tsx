@@ -1,48 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 
-export default function RegistrationPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const roles = [
+  "Client",
+  "Vendor",
+  "Supplier",
+  "Consultant",
+  "Engineer",
+  "Designer",
+  "Transporter",
+];
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const res = await fetch("http://localhost:4001/registration", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email }),
-    });
-
-    if (res.ok) {
-      setMessage("✅ Registered successfully!");
-    } else {
-      setMessage("❌ Error registering user");
-    }
-  }
-
+export default function RegistrationsPage() {
   return (
-    <div className="p-6">
-      <h1 className="text-xl font-bold mb-4">Registration</h1>
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <input
-          className="border p-2 w-full"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
-        />
-        <input
-          className="border p-2 w-full"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-        />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-          Submit
-        </button>
-      </form>
-      {message && <p className="mt-3">{message}</p>}
+    <div className="p-10">
+      <h1 className="text-3xl font-bold mb-6">Select Your Role to Register</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {roles.map((role) => (
+          <Link
+            key={role}
+            href={`/registration/${role.toLowerCase()}`}
+            className="p-6 border rounded-xl shadow hover:shadow-lg transition"
+          >
+            <h2 className="text-xl font-semibold">{role}</h2>
+            <p className="text-sm text-gray-600">
+              Register as a {role} with role-specific details & documents
+            </p>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

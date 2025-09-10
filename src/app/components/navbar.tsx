@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-blue-900 text-white p-4 flex justify-between items-center relative">
-      <div className="text-xl font-bold">Your Company</div>
+      <div className="text-xl font-bold">ANI MEPF & ELV</div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 items-center">
