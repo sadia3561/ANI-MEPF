@@ -85,7 +85,7 @@ export default function VendorForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 p-6 max-w-4xl mx-auto bg-white shadow-md rounded-lg"
+      className="space-y-4 p-4 sm:p-6 max-w-full sm:max-w-4xl mx-auto bg-white rounded-lg shadow"
     >
       {/* Section A */}
       <h2 className="text-xl font-semibold">Section A: Company Information</h2>

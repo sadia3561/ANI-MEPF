@@ -1,18 +1,14 @@
-"use client";
+import RegistrationForm from "@/app/components/RegistrationForm";
 
-import { useParams } from "next/navigation";
-import RegistrationForm from "../../components/RegistrationForm";
+interface PageProps {
+  params: { role: string };
+}
 
-
-export default function RoleRegistrationPage() {
-  const { role } = useParams();
-
+export default function RegistrationPage({ params }: PageProps) {
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold mb-4">
-        {role?.toString().toUpperCase()} Registration
-      </h1>
-      <RegistrationForm role={role as string} />
+    <div className="min-h-screen bg-gray-100 py-10">
+      {/* pass role explicitly */}
+      <RegistrationForm role={params.role} />
     </div>
   );
 }
