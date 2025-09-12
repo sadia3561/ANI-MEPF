@@ -28,15 +28,6 @@ export default function AboutusPage() {
 
         
 
-          <div>
-            <h3 className="text-2xl font-semibold text-blue-800">Mission</h3>
-            <ul className="list-disc list-inside mt-2 text-gray-700 space-y-2">
-              <li>Deliver end-to-end engineered solutions that match international standards.</li>
-              <li>Provide safe, sustainable, and energy-efficient infrastructure systems.</li>
-              <li>Strengthen client partnerships with trust, transparency, and timely delivery.</li>
-              <li>Constantly innovate with advanced technology integration.</li>
-            </ul>
-          </div>
         </section>
 
         
@@ -74,7 +65,7 @@ export default function AboutusPage() {
             {/* Managing Director */}
             <div>
               <h3 className="text-xl font-semibold">Madhulikaa</h3>
-              <p className="text-gray-700">Managing Director</p>
+              <p className="text-gray-700">Business Head</p>
               <p>📞 +91 70119 44649</p>
               <p>✉️ madhuaabhanexus@gmail.com</p>
             </div>
@@ -89,8 +80,17 @@ export default function AboutusPage() {
 
           <div className="space-y-8">
             <div>
+              <h3 className="text-xl font-semibold">K. B. Singh</h3>
+              <p className="text-gray-700">General Manager</p>
+              <p>📞 +91 99582 50795</p>
+              <p>✉️ aabhanexuspm@gmail.com</p>
+            </div>
+            
+
+          
+            <div>
               <h3 className="text-xl font-semibold">Kuldeep Singh</h3>
-              <p className="text-gray-700">Project HOD</p>
+              <p className="text-gray-700">HOD MEP & ELV</p>
               <p>📞 +91 88260 97343</p>
               <p>✉️ aabhanexuspm@gmail.com</p>
             </div>
@@ -98,13 +98,14 @@ export default function AboutusPage() {
             <div>
               <h3 className="text-xl font-semibold">Naziya Sheikh</h3>
               <p className="text-gray-700">HR Manager</p>
-              <p>📞 +91 92140 62305</p>
+              <p>📞 +91 87562 61693</p>
               <p>✉️ aabhanexushr@gmail.com</p>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold">Archana Sharma</h3>
               <p className="text-gray-700">Sales Manager</p>
+               <p>📞 +91 72593 98273</p>
               <p>✉️ salesaabhanexus@gmail.com</p>
             </div>
 
@@ -118,6 +119,7 @@ export default function AboutusPage() {
            <div>
               <h3 className="text-xl font-semibold">Suryabhan Vishwakarma</h3>
               <p className="text-gray-700">Account Manager</p>
+               <p>📞 +91 79057 21472</p>
               <p>✉️ aabhanexusaccsurya@gmail.com</p>
             </div>
           </div>
@@ -137,6 +139,7 @@ export default function AboutusPage() {
                 Sr. Legal Advisor <br />
                 Sr. Advocate, Supreme Court & Prayagraj High Court
               </p>
+               <p>📞 +91 94545 30380</p>
               <p>✉️ legalaabhanexus@gmail.com</p>
             </div>
 
@@ -170,6 +173,7 @@ export default function AboutusPage() {
             <div>
               <h3 className="text-xl font-semibold">Vishal Dhami</h3>
               <p className="text-gray-700">Founder, Aeroyantra | IT Head (ANI)</p>
+               <p>📞 +91 90120 81297</p>
               <p>✉️ itaabhanexis@gmail.com</p>
             </div>
 

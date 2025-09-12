@@ -183,12 +183,26 @@ export default function RegistrationForm({ role }: RegistrationFormProps) {
 
       {/* Section F */}
       <h2 className="text-xl font-semibold">Section F: Documents to be Attached</h2>
+      <div>
+        <label className="block font-medium">GST Certificate</label>
       <input type="file" name="gstCertificate" onChange={handleChange} className="w-full p-2 border rounded" />
-      <input type="file" name="panCard" onChange={handleChange} className="w-full p-2 border rounded" />
-      <input type="file" name="incorporationProof" onChange={handleChange} className="w-full p-2 border rounded" />
+      </div>
+     <div>
+          <label className="block font-medium">PAN Card Copy</label>
+          <input type="file" name="panCard" onChange={handleChange} className="w-full p-2 border rounded" />
+        </div>
+        <div>
+          <label className="block font-medium">Incorporation Proof</label>
+          <input type="file" name="incorporationProof" onChange={handleChange} className="w-full p-2 border rounded" />
+      </div>
+      <div>
+          <label className="block font-medium">MSME ISO Certificates</label>
       <input type="file" name="msmeIsoCertificates" onChange={handleChange} className="w-full p-2 border rounded" />
+       </div>
+       <div>
+          <label className="block font-medium">Previous Work Orders</label>
       <input type="file" name="previousWorkOrders" onChange={handleChange} className="w-full p-2 border rounded" />
-
+          </div>
       {/* Section G */}
       <h2 className="text-xl font-semibold">Section G: Declaration</h2>
       <label className="block mb-4 font-medium">
@@ -217,3 +231,4 @@ export default function RegistrationForm({ role }: RegistrationFormProps) {
     </form>
   );
 }
+ 
