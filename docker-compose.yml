@@ -1,26 +1,61 @@
+version: "3.9"
 services:
-  postgres:
+  frontend:
+    build: ./my-next-frontend
+    container_name: ani-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=http://backend:4000
+    depends_on:
+      - backend
+
+  backend:
+    build: ./my-next-backend
+    container_name: ani-backend
+    ports:
+      - "4000:4000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ani_platform
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    depends_on:
+      - db
+      - rabbitmq
+
+  db:
     image: postgres:15
-    container_name: ani_postgres
+    container_name: ani-db
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: ani_platform
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: ani_pgadmin
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@ani.com
-      PGADMIN_DEFAULT_PASSWORD: admin123
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: ani-rabbitmq
     ports:
-      - "5050:80"
+      - "5672:5672"
+      - "15672:15672" # Management UI
 
 volumes:
   pgdata:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
