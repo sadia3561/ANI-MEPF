@@ -52,7 +52,7 @@ export default function Home() {
                 End-to-end collaboration across the full project lifecycle
               </h2>
               <p className="mt-4 text-base md:text-lg text-indigo-100">
-                Registration → Tendering → Award → Execution → Billing → AMC → Help Desk → Analytics
+                Registration → Tendering → Award → Execution → Billing → AMC/Help Desk → Analytics
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
@@ -130,7 +130,7 @@ export default function Home() {
               href="/login"
               className="bg-white text-yellow-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition inline-block"
             >
-              Login
+              Login.
             </Link>
           </div>
         </div>
